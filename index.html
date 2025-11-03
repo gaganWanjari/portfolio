@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gagan Wanjari | Cloud Engineer Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Font (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #e2e8f0; /* slate-200 */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom styles for the timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem; /* 40px */
+            padding-bottom: 2rem; /* 32px */
+            border-left: 2px solid #38bdf8; /* light-blue-400 */
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+            padding-bottom: 0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.5625rem; /* -9px */
+            top: 0.125rem; /* 2px */
+            width: 1.125rem; /* 18px */
+            height: 1.125rem; /* 18px */
+            border-radius: 9999px;
+            background-color: #0f172a; /* slate-900 */
+            border: 3px solid #38bdf8; /* light-blue-400 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 w-full bg-slate-900/80 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Name -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="text-2xl font-bold text-white">Gagan Wanjari</a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="text-gray-300 hover:text-light-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#skills" class="text-gray-300 hover:text-light-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#experience" class="text-gray-300 hover:text-light-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#projects" class="text-gray-300 hover:text-light-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#contact" class="text-gray-300 hover:text-light-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button (Optional, scrolling works fine) -->
+                <div class="md:hidden">
+                    <!-- Mobile menu can be added here if needed -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+                        Gagan Wanjari
+                    </h1>
+                    <h2 class="text-2xl sm:text-3xl font-semibold text-light-blue-400 mt-2">
+                        Cloud & DevOps Engineer
+                    </h2>
+                    <p class="mt-6 text-lg text-gray-300 max-w-2xl">
+                        Detail-oriented Cloud Engineer with hands-on experience in AWS, infrastructure automation, and backend development. Skilled in managing cloud resources, optimizing system performance, and developing secure, scalable applications.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                        <a href="mailto:gaganwanjario8@gmail.com" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-light-blue-500 text-white font-medium hover:bg-light-blue-600 transition-all shadow-lg">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            Get In Touch
+                        </a>
+                        <a href="https://www.linkedin.com/in/gagan-wanjari-2a047a152/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-slate-700 text-white font-medium hover:bg-slate-600 transition-all shadow-lg">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            View LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
+                    Technical Skills
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Skill Card: Cloud Platforms -->
+                    <div class="bg-slate-900 p-6 rounded-xl shadow-xl hover:shadow-light-blue-500/10 hover:scale-105 transition-all duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="cloud" class="w-8 h-8 text-light-blue-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">Cloud Platforms</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li><strong>AWS:</strong> EC2, S3, Lambda, RDS, DynamoDB, CloudFormation, IAM</li>
+                            <li><strong>Azure:</strong> (AZ-900 & AI-900 Certified)</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Skill Card: DevOps Tools -->
+                    <div class="bg-slate-900 p-6 rounded-xl shadow-xl hover:shadow-light-blue-500/10 hover:scale-105 transition-all duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="server-cog" class="w-8 h-8 text-light-blue-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">DevOps Tools</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>CloudWatch</li>
+                            <li>AWS Systems Manager (SSM)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card: Programming -->
+                    <div class="bg-slate-900 p-6 rounded-xl shadow-xl hover:shadow-light-blue-500/10 hover:scale-105 transition-all duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="code-2" class="w-8 h-8 text-light-blue-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">Programming</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>JavaScript</li>
+                            <li>Node.js</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card: Databases -->
+                    <div class="bg-slate-900 p-6 rounded-xl shadow-xl hover:shadow-light-blue-500/10 hover:scale-105 transition-all duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="database" class="w-8 h-8 text-light-blue-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">Databases</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card: Concepts -->
+                    <div class="bg-slate-900 p-6 rounded-xl shadow-xl hover:shadow-light-blue-500/10 hover:scale-105 transition-all duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="brain-cog" class="w-8 h-8 text-light-blue-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">Core Concepts</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>Object-Oriented Programming (OOPs)</li>
+                            <li>Data Structures & Algorithms</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Card: Certifications -->
+                    <div class="bg-slate-900 p-6 rounded-xl shadow-xl hover:shadow-light-blue-500/10 hover:scale-105 transition-all duration-300">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="award" class="w-8 h-8 text-light-blue-400"></i>
+                            <h3 class="text-2xl font-semibold text-white">Certifications</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li>Microsoft Azure Fundamentals (AZ-900)</li>
+                            <li>Microsoft Azure AI Fundamentals (AI-900)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
+                    Professional Experience
+                </h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- Timeline Start -->
+                    <div>
+                        <!-- Timeline Item 1: TCS -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="text-sm font-medium text-gray-400">Jun 2024 - Present</span>
+                            <h3 class="text-xl font-semibold text-light-blue-400 mt-1">AI Cloud Engineer</h3>
+                            <p class="text-lg font-medium text-white">Tata Consultancy Services</p>
+                            <ul class="mt-4 space-y-2 text-gray-300 list-disc list-inside">
+                                <li>Managed and optimized AWS services including EC2, Lambda, S3, RDS, DynamoDB, and CloudFormation.</li>
+                                <li>Implemented automation using AWS Systems Manager (SSM) and CloudWatch for monitoring and access management.</li>
+                                <li>Ensured system security and compliance through IAM policy management and regular patch updates.</li>
+                                <li class="font-medium text-white">Reduced manual maintenance effort by 30% through scripting and automated alerts.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Timeline Item 2: Asset Chain -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="text-sm font-medium text-gray-400">Jun 2022 - Nov 2022</span>
+                            <h3 class="text-xl font-semibold text-light-blue-400 mt-1">Backend Development Intern</h3>
+                            <p class="text-lg font-medium text-white">Asset Chain Techlligence Pvt. Ltd.</p>
+                            <ul class="mt-4 space-y-2 text-gray-300 list-disc list-inside">
+                                <li>Contributed to a Blockchain-based credential management system, enhancing backend performance.</li>
+                                <li>Debugged and optimized backend functionality using Node.js, JavaScript, and REST APIs.</li>
+                                <li class="font-medium text-white">Improved website load time by 25% and implemented Git-based version control.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Timeline End -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
+                    Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    
+                    <!-- Project Card 1: Cloud-Native App -->
+                    <div class="bg-slate-900 rounded-xl shadow-xl overflow-hidden flex flex-col transform hover:scale-105 transition-all duration-300">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-semibold text-light-blue-400 mb-2">Cloud-Native Application Deployment</h3>
+                            <span class="text-sm font-medium text-gray-400">Personal Project</span>
+                            <p class="mt-4 text-gray-300">
+                                Designed and deployed a containerized Python application on AWS using Docker and Kubernetes (EKS). Implemented a CI/CD pipeline and managed all infrastructure as code.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-slate-900/50 border-t border-slate-700">
+                            <h4 class="text-sm font-semibold text-white mb-3">Technologies Used:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">AWS</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Docker</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Kubernetes</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">CI/CD</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">CloudFormation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Product Auth System -->
+                    <div class="bg-slate-900 rounded-xl shadow-xl overflow-hidden flex flex-col transform hover:scale-105 transition-all duration-300">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-semibold text-light-blue-400 mb-2">Product Authentication System</h3>
+                            <span class="text-sm font-medium text-gray-400">Final Year Project</span>
+                            <p class="mt-4 text-gray-300">
+                                Designed a decentralized application (DApp) to verify product authenticity and enhance transaction transparency using blockchain integration.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-slate-900/50 border-t border-slate-700">
+                            <h4 class="text-sm font-semibold text-white mb-3">Technologies Used:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Blockchain</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Solidity</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">React.js</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">JavaScript</span>
+                                <span class="bg-light-blue-900/50 text-light-blue-300 text-xs font-medium px-2.5 py-0.5 rounded-full">Ganache</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-24 bg-slate-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
+                    Education
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- University -->
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl text-center h-full flex flex-col justify-center">
+                        <h3 class="text-2xl font-semibold text-light-blue-400">Shri Sant Gajanan Maharaj College of Engineering, Shegaon</h3>
+                        <p class="text-lg text-white mt-2">B.E. in Computer Science and Engineering</p>
+                        <p class="text-gray-400 mt-1">2019 - 2023 | CGPA: 8.0/10</p>
+                    </div>
+                    <!-- High School -->
+                    <div class="bg-slate-800 p-8 rounded-xl shadow-xl text-center">
+                        <h3 class="text-2xl font-semibold text-light-blue-400">The Aditya Birla Public School, Awarpur</h3>
+                        <p class="text-lg text-white mt-2">Class 12 (CBSE)</p>
+                        <p class="text-gray-400 mt-1">92.8%</p>
+                        <p class="text-lg text-white mt-4">Class 10 (CBSE)</p>
+                        <p class="text-gray-400 mt-1">9.6 CGPA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-slate-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                    Get In Touch
+                </h2>
+                <p class="mt-4 text-lg text-gray-300 max-w-xl mx-auto">
+                    I'm currently open to new opportunities. If you think I'd be a good fit for your team, please feel free to reach out.
+                </p>
+		<p class="text-lg text-white mt-2"> +91-9119427794 </p>
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:gaganwanjario8@gmail.com" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-light-blue-500 text-white font-medium hover:bg-light-blue-600 transition-all shadow-lg text-lg">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        gaganwanjari08@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/gagan-wanjari-2a047a152/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-slate-700 text-white font-medium hover:bg-slate-600 transition-all shadow-lg text-lg">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-500">
+            <p>&copy; 2025 Gagan Wanjari. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script to activate Lucide icons -->
+    <script>
+      lucide.createIcons();
+    </script>
+
+</body>
+</html>
